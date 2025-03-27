@@ -1,0 +1,13 @@
+{
+    "title": "Rick und Morty Charaktere",
+    "status": "Status",
+    "species": "Spezies",
+    "gender": "Geschlecht",
+    "origin": "Herkunft",
+    "filterBy": "Filtern nach",
+    "sortBy": "Sortieren nach",
+    "name": "Name",
+    "loading": "Laden...",
+    "error": "Fehler beim Laden der Daten!"
+  }
+  

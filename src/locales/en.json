@@ -1,0 +1,13 @@
+{
+    "title": "Rick and Morty Characters",
+    "status": "Status",
+    "species": "Species",
+    "gender": "Gender",
+    "origin": "Origin",
+    "filterBy": "Filter by",
+    "sortBy": "Sort by",
+    "name": "Name",
+    "loading": "Loading...",
+    "error": "Error loading data!"
+  }
+  
