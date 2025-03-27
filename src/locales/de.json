@@ -2,12 +2,16 @@
     "title": "Rick und Morty Charaktere",
     "status": "Status",
     "species": "Spezies",
-    "gender": "Geschlecht",
-    "origin": "Herkunft",
-    "filterBy": "Filtern nach",
     "sortBy": "Sortieren nach",
+    "all": "Alle",
+    "alive": "Lebendig",
+    "dead": "Tot",
+    "unknown": "Unbekannt",
+    "human": "Mensch",
+    "alien": "Außerirdischer",
     "name": "Name",
-    "loading": "Laden...",
-    "error": "Fehler beim Laden der Daten!"
+    "origin": "Herkunft",
+    "gender": "Geschlecht",
+    "error": "Fehler beim Laden der Daten"
   }
   

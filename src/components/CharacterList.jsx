@@ -97,6 +97,7 @@ const CharacterList = () => {
 
   return (
     <Box>
+      {/* Filter / Sort Section */}
       <Paper sx={{ p: 3, mb: 4 }} elevation={3}>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={4}>
@@ -107,10 +108,10 @@ const CharacterList = () => {
                 label={t("status")}
                 onChange={(e) => setStatusFilter(e.target.value)}
               >
-                <MenuItem value="">All</MenuItem>
-                <MenuItem value="Alive">Alive</MenuItem>
-                <MenuItem value="Dead">Dead</MenuItem>
-                <MenuItem value="unknown">Unknown</MenuItem>
+                <MenuItem value="">{t("all")}</MenuItem>
+                <MenuItem value="Alive">{t("alive")}</MenuItem>
+                <MenuItem value="Dead">{t("dead")}</MenuItem>
+                <MenuItem value="unknown">{t("unknown")}</MenuItem>
               </Select>
             </FormControl>
           </Grid>
@@ -122,9 +123,9 @@ const CharacterList = () => {
                 label={t("species")}
                 onChange={(e) => setSpeciesFilter(e.target.value)}
               >
-                <MenuItem value="">All</MenuItem>
-                <MenuItem value="Human">Human</MenuItem>
-                <MenuItem value="Alien">Alien</MenuItem>
+                <MenuItem value="">{t("all")}</MenuItem>
+                <MenuItem value="Human">{t("human")}</MenuItem>
+                <MenuItem value="Alien">{t("alien")}</MenuItem>
               </Select>
             </FormControl>
           </Grid>
@@ -136,7 +137,7 @@ const CharacterList = () => {
                 label={t("sortBy")}
                 onChange={(e) => setSortField(e.target.value)}
               >
-                <MenuItem value="">None</MenuItem>
+                <MenuItem value="">{t("none")}</MenuItem>
                 <MenuItem value="name">{t("name")}</MenuItem>
                 <MenuItem value="origin">{t("origin")}</MenuItem>
               </Select>
@@ -148,13 +149,26 @@ const CharacterList = () => {
         {sortedResults.map((char) => (
           <Grid item xs={12} sm={6} md={4} key={char.id}>
             <Card sx={{ height: 400, display: "flex", flexDirection: "column" }}>
-              <CardMedia component="img" sx={{ height: 200, objectFit: "cover" }} image={char.image} alt={char.name} />
+              <CardMedia
+                component="img"
+                sx={{ height: 200, objectFit: "cover" }}
+                image={char.image}
+                alt={char.name}
+              />
               <CardContent>
                 <Typography variant="h6">{char.name}</Typography>
-                <Typography variant="body2">{t("status")}: {char.status}</Typography>
-                <Typography variant="body2">{t("species")}: {char.species}</Typography>
-                <Typography variant="body2">{t("gender")}: {char.gender}</Typography>
-                <Typography variant="body2">{t("origin")}: {char.origin.name}</Typography>
+                <Typography variant="body2">
+                  {t("status")}: {char.status}
+                </Typography>
+                <Typography variant="body2">
+                  {t("species")}: {char.species}
+                </Typography>
+                <Typography variant="body2">
+                  {t("gender")}: {char.gender}
+                </Typography>
+                <Typography variant="body2">
+                  {t("origin")}: {char.origin.name}
+                </Typography>
               </CardContent>
             </Card>
           </Grid>
@@ -163,7 +177,11 @@ const CharacterList = () => {
       <Box ref={sentinelRef} sx={{ height: "20px", mt: 4, textAlign: "center" }}>
         {loading && <CircularProgress />}
       </Box>
-      {error && <Box sx={{ mt: 4, textAlign: "center", color: "red" }}>{t("error")}</Box>}
+      {error && (
+        <Box sx={{ mt: 4, textAlign: "center", color: "red" }}>
+          {t("error")}
+        </Box>
+      )}
     </Box>
   );
 };

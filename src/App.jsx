@@ -10,11 +10,9 @@ import {
 } from "@mui/material";
 import CharacterList from "./components/CharacterList";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-
-// If i'm using a local logo
 import rickAndMortyLogo from "./assets/rick_and_morty_logo.png";
 
-//costum theme
+// Custom theme
 const theme = createTheme({
   typography: {
     fontFamily: "'Bangers', cursive",
@@ -30,17 +28,16 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      {/* entire screen is used as bg */}
       <Box
         sx={{
           minHeight: "100vh",
           width: "100%",
-          backgroundColor: "#2c3e50", 
+          backgroundColor: "#2c3e50",
           margin: 0,
           padding: 0,
         }}
       >
-        {/* NAVBAR without extra margin */}
+        {/* NAVBAR */}
         <AppBar position="static" sx={{ backgroundColor: "rgba(0,0,0,0.8)" }}>
           <Toolbar>
             <Box
@@ -69,8 +66,7 @@ const App = () => {
             backgroundColor: "rgba(255,255,255,0.9)",
             borderRadius: 0,
             p: 3,
-            minHeight: "calc(100vh - 64px)", // 64px = AppBar height (approx)
-            
+            minHeight: "calc(100vh - 64px)",
           }}
         >
           <CharacterList />
