@@ -12,6 +12,15 @@ import CharacterList from "./components/CharacterList";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import rickAndMortyLogo from "./assets/rick_and_morty_logo.png";
 
+//added 11 june
+import { add, subtract } from './utils';
+
+console.log('Add(2, 3):', add(2, 3));
+console.log('Subtract("a", 3):', subtract("a", 3));
+
+//This isn't meant for the UI—just to trigger Codoki's review with some context-aware code usage.
+
+
 // Custom theme
 const theme = createTheme({
   typography: {
